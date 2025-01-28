@@ -1,31 +1,19 @@
-name: TREM-Lite
+name: TREM-Lite-Windows
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
 
 jobs:
-  build:
+  build-and-release:
     strategy:
       matrix:
         config:
-          - os: macos-latest
-            platform: mac
-            artifact_name: TREM-Lite-macOS
-            artifact_path: dist/*.dmg
           - os: windows-latest
             platform: win
             artifact_name: TREM-Lite-Windows
             artifact_path: |
               dist/*.exe
               dist/*.msi
-          - os: ubuntu-latest
-            platform: linux
-            artifact_name: TREM-Lite-Linux
-            artifact_path: |
-              dist/*.AppImage
-              dist/*.deb
         node-version: [18]
 
     runs-on: ${{ matrix.config.os }}
@@ -42,20 +30,38 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Linux dependencies
-        if: matrix.config.os == 'ubuntu-latest'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y rpm
-
       - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build:${{ matrix.config.platform }}
 
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ matrix.config.artifact_name }}
-          path: ${{ matrix.config.artifact_path }}
-          if-no-files-found: error
+          tag_name: build-${{ github.run_id }}
+          release_name: Windows Build ${{ github.run_number }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Assets
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/TREM-Lite-Setup.exe
+          asset_name: TREM-Lite-Setup.exe
+          asset_content_type: application/octet-stream
+
+      - name: Upload MSI Installer
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/TREM-Lite.msi
+          asset_name: TREM-Lite.msi
+          asset_content_type: application/octet-stream
