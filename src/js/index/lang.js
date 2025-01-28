@@ -99,7 +99,7 @@ async function initializeStyles() {
     hideLoadingIndicator(loadingIndicator);
   }
   catch (error) {
-    logger.error('CSS 載入失敗:', error);
+    logger.error('CSS 加载失败:', error);
     hideLoadingIndicator(loadingIndicator);
   }
 }

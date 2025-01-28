@@ -131,3 +131,5 @@ dist
 
 # Miscellaneous
 .DS_Store
+
+*.bak

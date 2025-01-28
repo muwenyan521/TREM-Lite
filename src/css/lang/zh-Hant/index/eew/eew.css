@@ -4,16 +4,16 @@
   }
 
   &:not(:empty)::after {
-    content: "報";
+    content: "报";
   }
 }
 
 .cancel-title span::before {
-  content: "取　消";
+  content: "取 消";
 }
 
 .cancel-body span::before {
-  content: "此地震速報已取消";
+  content: "此地震速报已取消";
 }
 
 .no-eew.rts-trigger-low .info-unit::after {
@@ -21,50 +21,50 @@
 }
 
 .no-eew.rts-trigger-middle .info-unit::after {
-  content: "震動檢測 " !important;
+  content: "检出震动 " !important;
 }
 
 .no-eew.rts-trigger-high .info-unit::after {
-  content: "強震檢測 " !important;
+  content: "检查强烈振动 " !important;
 }
 
 .eew-warn .info-unit::before {
-  content: "地震速報 ";
+  content: "地震速报 ";
 }
 
 .eew-alert .info-unit::before {
-  content: "緊急地震速報 ";
+  content: "紧急地震速报 ";
 }
 
 .info-number-last::after {
-  content: "報(最終報)" !important;
+  content: "报(最终报)" !important;
 }
 
 .no-eew .info-unit::after {
-  content: "暫無生效中的地震預警";
+  content: "暂无生效中的地震预警";
 }
 
 .info-intensity::after {
-  content: "預估最大震度";
+  content: "预估最大震度";
 }
 
 .info-nsspe span::before {
-  content: "NSSPE 無震源參數推算";
+  content: "NSSPE 无震源参数推算";
 }
 
 .info-time::after {
-  content: "發震";
+  content: "发震";
 }
 
 .info-mag-text::after,
 .report-box-item-wrapper:first-child .report-mag-text::after {
-  content: "規模";
+  content: "规模";
   width: 3.5rem;
 }
 
 .info-depth-text::after,
 .report-depth-text::after {
-  content: "深度";
+  content: "深度;
 }
 
 /**最外包**/
@@ -258,7 +258,7 @@
             font-weight: bold;
 
             &:before {
-              content: "𝖬";
+              content: "M";
               font-size: 30px;
               margin-right: 4px;
             }
@@ -279,7 +279,7 @@
 
             &:after {
               margin-left: 4px;
-              content: "㎞";
+              content: "km";
               font-size: 22px;
             }
           }

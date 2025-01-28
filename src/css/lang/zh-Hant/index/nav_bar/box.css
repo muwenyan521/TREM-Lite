@@ -1,17 +1,17 @@
 .intensity-report::before {
-  content: "震度速報";
+  content: "震度速报";
 }
 .source-report::before {
-  content: "震源速報";
+  content: "震源速报";
 }
 .earthquake-report::before {
-  content: "地震報告";
+  content: "地震报告";
 }
 .tsunami-warning::before {
-  content: "海嘯警報";
+  content: "海啸警报";
 }
 .earthquake-warning::before {
-  content: "地震速報";
+  content: "地震速报";
 }
 
 .nav-bar {

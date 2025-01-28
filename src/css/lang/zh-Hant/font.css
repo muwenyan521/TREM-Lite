@@ -5,7 +5,7 @@
 }
 
 @font-face {
-  font-family: "Noto Sans TC";
-  src: url("./fonts/NotoSansTC-VariableFont_wght.ttf") format("truetype");
+  font-family: "Noto Sans CJK SC";
+  src: url("./fonts/NotoSansSC-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
 }

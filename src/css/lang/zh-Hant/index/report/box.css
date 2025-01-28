@@ -1,11 +1,11 @@
 .report-intensity-text::before {
-  content: "觀測最大震度";
+  content: "观测最大震度";
 }
 .web-detection::before {
-  content: "檢知";
+  content: "检知";
 }
 .web-report::before {
-  content: "報告";
+  content: "报告";
 }
 .report-replay::before {
   content: "重播";
@@ -100,7 +100,7 @@
       }
 
       .report-loc:before {
-        content: "震源調查中";
+        content: "震源调查中";
       }
     }
   }
@@ -300,7 +300,7 @@
         font-weight: bold;
 
         &:before {
-          content: "𝖬";
+          content: "M";
           font-size: 20px;
           margin-right: 4px;
         }
@@ -325,7 +325,7 @@
 
           &:after {
             margin-left: 4px;
-            content: "㎞";
+            content: "km";
             font-size: 20px;
           }
         }

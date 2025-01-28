@@ -4,7 +4,7 @@
 }
 .button[for="graphics"]:before,
 .graphics-header-title:before {
-  content: "圖形";
+  content: "显示";
 }
 .button[for="sound-effects"]:before,
 .sound-effects-header-title::before {
@@ -12,115 +12,115 @@
 }
 .button[for="extended"]:before,
 .extended-header-title:before {
-  content: "擴充";
+  content: "拓展";
 }
 .button[for="info"]:before,
 .info-header-title::before {
-  content: "關於";
+  content: "关于";
 }
 .location-title::before {
   content: "所在地";
 }
 .location-description::before {
-  content: "設定所在地可以在地震發生時預估你所在區域的地震震度。";
+  content: "设定所在地可以在地震发生时预估你所在区域的地震震度。";
 }
 .rts-station-title::before {
-  content: "即時測站";
+  content: "实时测站";
 }
 .rts-station-description::before {
-  content: "顯示於主畫面左上方的即時測站。";
+  content: "显示在主界面左上方的实时测站。";
 }
 .warning-title::before {
-  content: "預警條件";
+  content: "预警条件";
 }
 .warning-description::before {
-  content: "即時測站(任一站)為觸發時任一站震度門檻，預估震度(所在地)為地震預警時所在地震度門檻，達到下方任一條件後軟體將會發出音效及彈出視窗。";
+  content: "实时测站（任一站）为触发时任一站震度门槛，预估震度（所在地）为地震预警时所在地震度门槛，达到下方任一条件后软件将会发出音效及弹出窗口。";
 }
 .current-realtime-station::before {
-  content: "即時測站（任一站）";
+  content: "实时测站（任一站）";
 }
 .current-estimate-intensity::before {
-  content: "預估震度（所在地）";
+  content: "预估震度（所在地）";
 }
 .show-window-title::before {
-  content: "顯示視窗";
+  content: "显示窗口";
 }
 .show-window-description::before {
-  content: "程式自動跳窗時機。";
+  content: "程序自动弹窗时机。";
 }
 .other-function-title::before {
   content: "其他功能";
 }
 .other-function-description::before {
-  content: "TREM Lite不常用的小功能都在這裡。";
+  content: "TREM Lite不常用的小功能都在这里。";
 }
 .auto-start::before {
-  content: "開機自動啟動（Windows）";
+  content: "开机自动启动（Windows）";
 }
 .earthquake-eew::before {
-  content: "地震預警";
+  content: "地震预警";
 }
 .earthquake-report::before {
-  content: "地震報告";
+  content: "地震报告";
 }
 .earthquake-detect::before {
-  content: "地震檢知";
+  content: "地震检知";
 }
 .rts-intensity::before {
-  content: "震度速報";
+  content: "震度速报";
 }
 .reset-button::before,
 .reset-setting-title::before {
-  content: "重設";
+  content: "重设";
 }
 .reset-setting::before {
-  content: "重置所有設定";
+  content: "重置所有设定";
 }
 .auto-zoom-title::before {
-  content: "地圖自動縮放";
+  content: "地图自动缩放";
 }
 .auto-zoom-description::before {
-  content: "預設地圖自動縮放為禁用狀態。";
+  content: "默认地图自动缩放为禁用。";
 }
 .block-auto-zoom::before {
   content: "禁用地圖自動縮放";
 }
 .effects-dong-title::before {
-  content: "預警播報";
+  content: "预警播报";
 }
 .effects-dong-description::before {
-  content: "地震發生時播報所在地預估震度以及地震波抵達剩餘秒數。";
+  content: "地震发生时播报所在地预估震度以及地震波抵达剩余秒数。";
 }
 .dong-dong::before {
-  content: "咚咚咚音效(僅在有倒數情況下生效)";
+  content: "咚咚咚音效（仅在有倒计时的情况下生效）";
 }
 .sound-effects-list-title::before {
   content: "音效列表";
 }
 .sound-effects-list-description::before {
-  content: "開啟或關閉特定的音效";
+  content: "开启或关闭特定的音效";
 }
 .extended-list-title:before {
-  content: "擴充功能";
+  content: "拓展功能";
 }
 .extended-list-description:empty::before,
 .extended-info .extended-info-warning:empty::before {
-  content: "使用來源不明或無法信任的擴充可能危及您的個人資訊安全，請謹慎使用。";
+  content: "使用来源不明或无法信任的扩展可能会危及您的个人信息安全，请谨慎使用。";
 }
 .extended-list-descriptions:empty::before {
-  content: "選擇啟用的擴充，擴充將在程式啟動時載入。";
+  content: "选择启用的扩展，扩展将在程序启动时加载。";
 }
 .extended-setting-button::before {
-  content: "設定";
+  content: "设置";
 }
 .extended-download-button::before {
-  content: "下載";
+  content: "下载";
 }
 .extended-download-button.downloading::before {
-  content: "下載中...";
+  content: "下载中...";
 }
 .extended-download-button.downloaded::before {
-  content: "下載完成";
+  content: "下载完成";
 }
 .extended-update-button::before {
   content: "更新";
@@ -129,64 +129,64 @@
   content: "已是最新版本";
 }
 .p-alert::before {
-  content: "INTENSITY（收到震度速報時播放）";
+  content: "INTENSITY（收到震度速报时播放）";
 }
 .report::after {
-  content: "REPORT（收到地震報告時播放）";
+  content: "REPORT（收到地震报告时播放）";
 }
 .update::before {
-  content: "UPDATE（地震預警更正時播放）";
+  content: "UPDATE（地震预警更新时播放）";
 }
 .info-trem-lite::before {
-  content: "關於 TREM Lite";
+  content: "关于 TREM Lite";
 }
 .info-trem-description::before {
-  content: "TREM-Lite 是一款開源地震速報軟體，提供給您即時的地震資訊，利用自製的測站，顯示各地的即時震度，在地震發生的第一時間取得各管道發布的強震即時警報訊息。";
+  content: "TREM-Lite是一款开源地震速报软件，为您提供即时的地震信息，利用自制的测站，显示各地的即时震度，在地震发生的第一时间取得各渠道发布的强震即时警报信息。";
 }
 .app-version-title::before {
-  content: "程式版本";
+  content: "程序版本";
 }
 .system-os-title::before {
-  content: "系統版本";
+  content: "系统版本";
 }
 .system-cpu-title::before {
   content: "CPU";
 }
 .source-title::before {
-  content: "資料來源";
+  content: "自律来源";
 }
 .source-eew::before {
-  content: "地震預警";
+  content: "地震预警";
 }
 .source-cwa::before {
-  content: "交通部中央氣象署 (CWA)";
+  content: "交通部中央气象局 (CWA)";
 }
 .source-shindo::before {
   content: "震度";
 }
 .source-sinica::before {
-  content: "中央研究院 (SINICA)";
+  content: "中国科学院 (SINICA)";
 }
 .source-trem::before {
-  content: "臺灣即時地震監測 (TREM)";
+  content: "台湾实时地震监测 (TREM)";
 }
 .contributor-title::before {
-  content: "貢獻者";
+  content: "贡献者";
 }
 .contributor-description::before {
-  content: "感謝以下的貢獻者們，因為有了他們的貢獻， TREM Lite 才得以實現。";
+  content: "感谢以下贡献者们，因为有了他们的贡献，TREM Lite才得以实现。";
 }
 .reset .confirm-title::before {
-  content: "您確定要重置設定嗎？重設後將無法返回。";
+  content: "您确定要重置设置吗？重置后将无法返回。";
 }
 .extendedOpen .confirm-title::before {
-  content: "您確定要啟用 ";
+  content: "您确定要启用 ";
 }
 .extendedOpen .confirm-title::after {
-  content: " 擴充嗎，若使用來源不明或無法信任的擴充可能危及您的個人資訊安全。";
+  content: " 扩展吗？使用来源不明或不可信的扩展可能会危及您的个人信息安全。";
 }
 .confirm-sure:empty::before {
-  content: "確定";
+  content: "确定";
 }
 .confirm-sure:not(:empty)::after {
   content: "秒";
@@ -199,58 +199,58 @@
   font-size: unset !important;
 }
 .current:empty:before {
-  content: "未設定";
+  content: "未设定";
 }
 .unverified-badge::before {
-  content: "未驗證";
+  content: "未验证";
 }
 .verified-badge::before {
-  content: "已驗證";
+  content: "已验证";
 }
 .unloaded-badge::before {
-  content: "未載入";
+  content: "未加载";
 }
 .loaded-badge::before {
-  content: "已載入";
+  content: "已加载";
 }
 .success.message-box:before {
-  content: "操作成功，關閉設定視窗後套用！";
+  content: "操作成功，关闭设置窗口后应用！";
 }
 .failed.message-box:before {
-  content: "操作失敗！";
+  content: "操作失败！";
 }
 .success-download.message-box:before {
-  content: "下載完成，關閉設定視窗後套用！";
+  content: "下载完成后，关闭设置窗口即可应用！";
 }
 .success-copy.message-box:before {
-  content: "複製成功！";
+  content: "复制成功！";
 }
 .success-failed.message-box:before {
-  content: "複製失敗！";
+  content: "复制识别！";
 }
 .extended-store:before {
-  content: "TREM 擴充商店";
+  content: "TREM 拓展商店";
 }
 .eew-1::before {
-  content: "EEW（收到地震預警時播放）";
+  content: "EEW（收到地震预警时播放）";
 }
 .extended-list-button[for="extended-installed-list"]:before {
-  content: "擴充列表";
+  content: "拓展列表";
 }
 .extended-list-button[for="extended-store-list"]:before {
-  content: "擴充商店";
+  content: "拓展商店";
 }
 .extended-info:not(:has(.wave-container))::before {
-  content: "目前沒有啟用中的擴充";
+  content: "目前没有启用中的扩展";
   color: red;
 }
 .copy-debug-log:before {
-  content: "複製debug log";
+  content: "复制调试日志";
 }
 
 .eew-2 {
   &::before {
-    content: "EEW2（最大預估";
+    content: "EEW2（最大预估";
   }
   .special-text:before {
     content: "震度5弱";
@@ -267,7 +267,7 @@
     content: "8gal";
   }
   &::after {
-    content: "時播放）";
+    content: "时播放）";
   }
 }
 .pga-2 {
@@ -278,15 +278,15 @@
     content: "200gal";
   }
   &::after {
-    content: "時播放）";
+    content: "时播放）";
   }
 }
 .shindo-0 {
   &::before {
-    content: "SHINDO0（地震檢知";
+    content: "SHINDO0（地震检知";
   }
   .special-text:before {
-    content: "震度0級";
+    content: "震度0级";
   }
   &::after {
     content: "以上播放）";
@@ -294,10 +294,10 @@
 }
 .shindo-1 {
   &::before {
-    content: "SHINDO1（地震檢知";
+    content: "SHINDO1（地震检知";
   }
   .special-text:before {
-    content: "震度2級";
+    content: "震度2级";
   }
   &::after {
     content: "以上播放）";
@@ -305,10 +305,10 @@
 }
 .shindo-2 {
   &::before {
-    content: "SHINDO2（地震檢知";
+    content: "SHINDO2（地震检知";
   }
   .special-text:before {
-    content: "震度4級";
+    content: "震度4级";
   }
   &::after {
     content: "以上播放）";
@@ -1005,7 +1005,7 @@ li {
   font-size: 15px;
   color: #fff;
   transition: border-color 0.3s, box-shadow 0.3s;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans CJK SC", sans-serif;
   width: 100%;
 
   &:focus {

@@ -3,7 +3,7 @@
 body {
   user-select: none;
   margin: 0;
-  font-family: Manrope, "Noto Sans TC", sans-serif;
+  font-family: Manrope, "Noto Sans CJK SC", sans-serif;
   text-rendering: optimizeLegibility;
   overflow: hidden;
 
@@ -14,10 +14,10 @@ body {
 }
 
 .btn-add:before {
-  content: "新增項目";
+  content: "新建项目";
 }
 .root:before {
-  content: "新增根級欄位";
+  content: "新增根级字段";
 }
 .json-title:before {
   content: "JSON";
@@ -26,25 +26,25 @@ body {
   content: "YAML";
 }
 .visual-editor-title:before {
-  content: "視覺化編輯";
+  content: "可视化编辑";
 }
 .json-error:before {
-  content: "JSON 格式錯誤";
+  content: "JSON 格式错误";
 }
 .yaml-transfer-error:before {
-  content: "YAML 轉換錯誤";
+  content: "YAML 转换错误";
 }
 .yaml-extract-error:before {
-  content: "YAML 解析錯誤";
+  content: "YAML 解析错误";
 }
 .auto-save-success:before {
-  content: "已自動儲存";
+  content: "已自动保存";
 }
 .auto-save-error:before {
-  content: "儲存錯誤";
+  content: "保存错误";
 }
 .load-error:before {
-  content: "讀取錯誤";
+  content: "读取错误";
 }
 
 :root {

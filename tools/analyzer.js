@@ -93,17 +93,17 @@ class ElectronPackageAnalyzer {
   }
 
   generateReport() {
-    console.log('\n=== Electron Package Size Analysis ===');
-    console.log(`\nTotal Size: ${prettyBytes(this.results.total)}`);
+    console.log('\n=== Electron包大小分析 ===');
+    console.log(`\n总大小: ${prettyBytes(this.results.total)}`);
 
-    console.log('\nSize by Category:');
+    console.log('\n按类别划分的大小:');
     Object.entries(this.results.byCategory)
       .sort((a, b) => b[1].size - a[1].size)
       .forEach(([category, info]) => {
         console.log(`${category}: ${info.prettySize} (${info.percentage})`);
       });
 
-    console.log('\nLargest Files:');
+    console.log('\n最大的文件:');
     this.results.details
       .sort((a, b) => b.size - a.size)
       .slice(0, 10)

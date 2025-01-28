@@ -247,9 +247,9 @@ class PluginEditor {
       });
       const addButton = document.createElement('button');
       addButton.className = 'btn btn-add';
-      addButton.textContent = '添加欄位';
+      addButton.textContent = '添加栏位';
       addButton.onclick = () => {
-        const newKey = prompt('輸入新欄位名稱：');
+        const newKey = prompt('输入新栏位名称：');
         if (newKey && !Object.prototype.hasOwnProperty.call(value, newKey)) {
           value[newKey] = '';
           this.updateFromVisual();
@@ -274,7 +274,7 @@ class PluginEditor {
     const addButton = document.createElement('button');
     addButton.className = 'btn btn-add root';
     addButton.onclick = () => {
-      const newKey = prompt('輸入新欄位名稱：');
+      const newKey = prompt('输入新栏位名称：');
       if (newKey && !Object.prototype.hasOwnProperty.call(this.yamlObject, newKey)) {
         this.yamlObject[newKey] = '';
         this.updateFromVisual();

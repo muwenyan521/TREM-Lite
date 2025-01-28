@@ -63,7 +63,7 @@ function intensity_float_to_int(float) {
 }
 
 function int_to_string(max) {
-  return (max == 5) ? '5弱' : (max == 6) ? '5強' : (max == 7) ? '6弱' : (max == 8) ? '6強' : (max == 9) ? '7級' : `${max}級`;
+  return (max == 5) ? '5弱' : (max == 6) ? '5强' : (max == 7) ? '6弱' : (max == 8) ? '6强' : (max == 9) ? '7级' : `${max}级`;
 }
 
 function formatToChineseTime(dateTimeString) {
@@ -73,7 +73,7 @@ function formatToChineseTime(dateTimeString) {
   const period = hours < 12 ? '早上' : '晚上';
   const formattedHours = hours <= 12 ? hours : hours - 12;
   const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-  return `${period} ${formattedHours}點${formattedMinutes}分 左右`;
+  return `${period} ${formattedHours}点${formattedMinutes}分 左右`;
 }
 
 function extractLocation(loc) {

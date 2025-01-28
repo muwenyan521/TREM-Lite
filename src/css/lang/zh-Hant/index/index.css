@@ -11,7 +11,7 @@
 body {
   user-select: none;
   margin: 0;
-  font-family: Manrope, "Noto Sans TC", sans-serif;
+  font-family: Manrope, "Noto Sans CJK SC", sans-serif;
   text-rendering: optimizeLegibility;
   overflow: hidden;
 
@@ -84,7 +84,7 @@ body {
 }
 
 /**版本號**/
-html[lang="zh-Hant"] {
+html[lang="zh-Hans"] {
   .version-check-text::before {
     content: "新版本";
   }

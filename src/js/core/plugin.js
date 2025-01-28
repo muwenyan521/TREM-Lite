@@ -802,12 +802,12 @@ class PluginLoader {
         const verified = tremInfo?.verification?.valid || false;
 
         if (!verified && tremInfo?.verification?.error == 'Missing signature.json') {
-          logger.error(`[Plugin: ${pluginName}] 【!!!嚴重警告!!!】遺失簽名, Skipping plugin`);
+          logger.error(`[Plugin: ${pluginName}] 【!!!严重警告!!!】签名缺失, Skipping plugin`);
           logger.error(`[Plugin: ${pluginName}] 【!!!WARNING!!!】Missing signature, Skipping plugin`);
           continue;
         }
         else if (!verified) {
-          logger.warn(`[Plugin: ${pluginName}] 【!!!嚴重警告!!!】未發現有效簽名，除非信任擴充來源否則應立即停用`);
+          logger.warn(`[Plugin: ${pluginName}] 【!!!严重警告!!!】未发现有效签名，除非信任扩展来源，否则应立即停用`);
           logger.warn(`[Plugin: ${pluginName}] 【!!!WARNING!!!】No valid signature found, disable immediately unless plugin source is trusted`);
         }
 
@@ -1030,11 +1030,11 @@ class PluginLoader {
 
   getSensitivityDescription(level) {
     switch (level) {
-      case 4: return '極高敏感度 - 包含系統核心API存取權限';
-      case 3: return '高敏感度 - 包含注入或檔案系統存取權限';
-      case 2: return '中等敏感度 - 包含事件權限';
-      case 1: return '低敏感度 - 包含日誌/元數據存取';
-      default: return '無敏感操作';
+      case 4: return '极高敏感度 - 包含系统核心API访问权限';
+      case 3: return '高敏感度 - 包含注入或文件系统访问权限';
+      case 2: return '中等敏感度 - 包含事件权限';
+      case 1: return '低敏感度 - 包含日志/元数据访问';
+      default: return '无敏感操作';
     }
   }
 

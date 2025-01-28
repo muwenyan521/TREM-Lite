@@ -69,7 +69,7 @@ class AudioQueue {
         this.playNext();
       };
     }).catch((error) => {
-      logger.error('音效播放失敗:', error);
+      logger.error('音效播放失败:', error);
       this.isPlaying = false;
       this.playNext();
     });
@@ -166,8 +166,8 @@ class AudioManager {
       now: { loc: ans.data.eq.loc, i: ans.data.eq.max },
     };
 
-    const notification = new Notification(`${(ans.data.status == 1) ? '🚨 緊急地震速報' : '⚠️ 地震速報'} ${ans.data.serial}報`, {
-      body: `${formatTimestamp(ans.data.eq.time)} 最大預估${intensity_list[ans.data.eq.max]}\n${ans.data.eq.loc} M${ans.data.eq.mag} ${ans.data.eq.depth}km`,
+    const notification = new Notification(`${(ans.data.status == 1) ? '🚨 紧急地震速报' : '⚠️ 地震速报'} ${ans.data.serial}報`, {
+      body: `${formatTimestamp(ans.data.eq.time)} 最大预估${intensity_list[ans.data.eq.max]}\n${ans.data.eq.loc} M${ans.data.eq.mag} ${ans.data.eq.depth}km`,
       icon: '../TREM.ico',
     });
 
@@ -197,8 +197,8 @@ class AudioManager {
     this.ttsCache[ans.data.id].now.loc = ans.data.eq.loc;
     this.ttsCache[ans.data.id].now.i = ans.data.eq.max;
 
-    const notification = new Notification(`${(ans.data.status == 1) ? '🚨 緊急地震速報' : '⚠️ 地震速報'} ${ans.data.serial}報`, {
-      body: `${formatTimestamp(ans.data.eq.time)} 最大預估${intensity_list[ans.data.eq.max]}\n${ans.data.eq.loc} M${ans.data.eq.mag} ${ans.data.eq.depth}km`,
+    const notification = new Notification(`${(ans.data.status == 1) ? '🚨 紧急地震速报' : '⚠️ 地震速报'} ${ans.data.serial}報`, {
+      body: `${formatTimestamp(ans.data.eq.time)} 最大预估${intensity_list[ans.data.eq.max]}\n${ans.data.eq.loc} M${ans.data.eq.mag} ${ans.data.eq.depth}km`,
       icon: '../TREM.ico',
     });
 
@@ -228,8 +228,8 @@ class AudioManager {
       this.audioQueues.shindo.add(TREM.constant.AUDIO.SHINDO2, this.priorityRules.shindo);
     }
 
-    const notification = new Notification(`🟥 強震檢測 [${formatTimestamp(now())}]`, {
-      body: `請注意今後的資訊。`,
+    const notification = new Notification(`🟥 强震检出 [${formatTimestamp(now())}]`, {
+      body: `请注意今后的信息。`,
       icon: '../TREM.ico',
     });
 
@@ -243,8 +243,8 @@ class AudioManager {
       this.audioQueues.shindo.add(TREM.constant.AUDIO.SHINDO1, this.priorityRules.shindo);
     }
 
-    const notification = new Notification(`🟧 震動檢測 [${formatTimestamp(now())}]`, {
-      body: `請注意今後的資訊。`,
+    const notification = new Notification(`🟧 震动检出 [${formatTimestamp(now())}]`, {
+      body: `请注意今后的信息。`,
       icon: '../TREM.ico',
     });
 
@@ -258,8 +258,8 @@ class AudioManager {
       this.audioQueues.shindo.add(TREM.constant.AUDIO.SHINDO0);
     }
 
-    const notification = new Notification(`🟩 弱反應 [${formatTimestamp(now())}]`, {
-      body: `請注意今後的資訊。`,
+    const notification = new Notification(`🟩 弱反应 [${formatTimestamp(now())}]`, {
+      body: `请注意今后的信息。`,
       icon: '../TREM.ico',
     });
 
@@ -283,17 +283,17 @@ class AudioManager {
     const time = formatToChineseTime(ans.data.time);
     const location = ans.data.loc.match(/位於(.+?)(?=\))/)[1];
     const notificationText = [
-      `${time.replace('點', ':').replace('分', '')}`,
-      `${location}發生地震`,
+      `${time.replace('时', ':').replace('分', '')}`,
+      `${location}发生地震`,
       `震源深度${ans.data.depth}公里`,
-      `地震規模M${ans.data.mag.toFixed(1)}`,
+      `地震规模M${ans.data.mag.toFixed(1)}`,
     ].join('，');
 
     const countyWithMaxIntensity = Object.entries(ans.data.list).find(([, data]) => data.int === maxIntensity)[0];
     const id = ans.data.id.split('-')[0];
 
-    const notification = new Notification(`🔔 地震報告 [${(id.includes('000')) ? '小區域有感地震' : id}]`, {
-      body: notificationText + `，${countyWithMaxIntensity}觀測到最大震度${maxIntensityText}。`,
+    const notification = new Notification(`🔔 地震报告 [${(id.includes('000')) ? '小区域有感地震' : id}]`, {
+      body: notificationText + `，${countyWithMaxIntensity}观测到最大震度${maxIntensityText}。`,
       icon: '../TREM.ico',
     });
 
@@ -302,12 +302,12 @@ class AudioManager {
     };
 
     let ttsText = [
-      '地震報告',
+      '地震报告',
       formatToChineseTime(ans.data.time),
-      `發生最大震度 ${maxIntensityText} 地震`,
-      `震央位於 ${location}`,
-      `震央深度為 ${ans.data.depth}公里`,
-      `地震規模為 ${ans.data.mag.toFixed(1)}`,
+      `发生最大震度 ${maxIntensityText} 地震`,
+      `震中位于 ${location}`,
+      `震源深度为 ${ans.data.depth}公里`,
+      `地震规模为 ${ans.data.mag.toFixed(1)}`,
     ].join('，');
 
     const intensityStations = {
@@ -331,24 +331,24 @@ class AudioManager {
       const stationText = intensityStations[intensity].join('，');
 
       if (count === 0) {
-        ttsText += `，這次地震，最大震度 ${int_to_string(intensity)} 地區 ${stationText}`;
+        ttsText += `，本次地震，最大震度 ${int_to_string(intensity)} 地区 ${stationText}`;
       }
       else if (count === 1) {
-        ttsText += `，此外，震度 ${int_to_string(intensity)} 地區 ${stationText}`;
+        ttsText += `，此外，震度 ${int_to_string(intensity)} 地区 ${stationText}`;
       }
       else {
-        ttsText += `，震度 ${int_to_string(intensity)} 地區 ${stationText}`;
+        ttsText += `，震度 ${int_to_string(intensity)} 地区 ${stationText}`;
         break;
       }
       count++;
     }
 
     const speechText = ttsText
-      .replace('2.', '二點')
-      .replaceAll('.2', '點二')
-      .replaceAll('三地門', '三弟門')
-      .replaceAll('.', '點')
-      .replaceAll('為', '圍');
+      .replace('2.', '二点')
+      .replaceAll('.2', '点二')
+      .replaceAll('三地門', '三弟门')
+      .replaceAll('.', '点')
+      .replaceAll('為', '为');
 
     TREM.variable.speech.speak({ text: speechText });
   }
@@ -416,8 +416,8 @@ class AudioManager {
       }
     });
 
-    const notification = new Notification('🔔 長週期地震動', {
-      body: `${time.replace('點', ':').replace('分', '')}，${maxCity}觀測到最大長週期地震動階級${maxIntensity}。`,
+    const notification = new Notification('🔔 长周期地震动', {
+      body: `${time.replace('时', ':').replace('分', '')}，${maxCity}观测到最大长周期地震动阶级${maxIntensity}。`,
       icon: '../TREM.ico',
     });
 
@@ -426,9 +426,9 @@ class AudioManager {
     };
 
     let ttsText = [
-      '長週期第震動觀測資訊',
+      '长周期地震动观测信息',
       formatToChineseTime(ans.data.id),
-      `${maxCity}觀測到最大長週期地震動階級${maxIntensity}`,
+      `${maxCity}观测到最大长周期地震动阶级${maxIntensity}`,
     ].join('，');
 
     let count = 0;
@@ -440,24 +440,24 @@ class AudioManager {
       const stationText = intensityStations[intensity].join('，');
 
       if (count === 0) {
-        ttsText += `，這次地震，最大長週期第震動階級 ${intensity} 地區 ${stationText}`;
+        ttsText += `，本次地震，最大长周期地震动阶级 ${intensity} 地区 ${stationText}`;
       }
       else if (count === 1) {
-        ttsText += `，此外，長週期第震動階級 ${intensity} 地區 ${stationText}`;
+        ttsText += `，此外，长周期地震动阶级 ${intensity} 地区 ${stationText}`;
       }
       else {
-        ttsText += `，長週期第震動階級 ${intensity} 地區 ${stationText}`;
+        ttsText += `，长周期地震动阶级 ${intensity} 地区 ${stationText}`;
         break;
       }
       count++;
     }
 
     const speechText = ttsText
-      .replace('2.', '二點')
-      .replaceAll('.2', '點二')
-      .replaceAll('三地門', '三弟門')
-      .replaceAll('.', '點')
-      .replaceAll('為', '圍');
+      .replace('2.', '二点')
+      .replaceAll('.2', '点二')
+      .replaceAll('三地門', '三弟门')
+      .replaceAll('.', '点')
+      .replaceAll('為', '为');
 
     TREM.variable.speech.speak({ text: speechText });
   }
@@ -470,9 +470,9 @@ class AudioManager {
     const city_intensity_list = findMaxIntensityCity(ans.data.area);
 
     if (TREM.variable.cache.intensity.max < ans.data.max) {
-      TREM.variable.speech.speak({ text: `震度速報，震度${int_to_string(city_intensity_list.intensity).replace('級', '')}，${city_intensity_list.cities.join('、')}`, queue: true });
-      const notification = new Notification(`📨 震度速報 [${formatTimestamp(ans.data.id)}]`, {
-        body: `震度${int_to_string(city_intensity_list.intensity).replace('級', '')} ${city_intensity_list.cities.join('、')}`,
+      TREM.variable.speech.speak({ text: `震度速报，震度${int_to_string(city_intensity_list.intensity).replace('级', '')}，${city_intensity_list.cities.join('、')}`, queue: true });
+      const notification = new Notification(`📨 震度速报 [${formatTimestamp(ans.data.id)}]`, {
+        body: `震度${int_to_string(city_intensity_list.intensity).replace('级', '')} ${city_intensity_list.cities.join('、')}`,
         icon: '../TREM.ico',
       });
 
@@ -499,7 +499,7 @@ class AudioManager {
     }
     this.ttsEewAlertLock = true;
     TREM.variable.speech.speak({
-      text: `緊急地震速報，${ans.data.city_alert_list.join('、')}，慎防強烈搖晃`,
+      text: `紧急地震速报，${ans.data.city_alert_list.join('、')}，消息强烈摇晃`,
       queue: false,
       listeners: {
         onend: () => {
@@ -518,11 +518,11 @@ class AudioManager {
         for (const id of Object.keys(this.ttsCache)) {
           if (this.ttsCache[id].now.i > this.ttsCache[id].last.i) {
             this.ttsCache[id].last.loc = this.ttsCache[id].now.loc;
-            TREM.variable.speech.speak({ text: `${this.ttsCache[id].last.loc}發生地震`, queue: true });
+            TREM.variable.speech.speak({ text: `${this.ttsCache[id].last.loc}发生地震`, queue: true });
 
             this.ttsCache[id].last.i = this.ttsCache[id].now.i;
             TREM.variable.speech.speak({
-              text: `預估最大震度${(!this.ttsCache[id].last.i) ? '不明' : intensity_list[this.ttsCache[id].last.i].replace('⁻', '弱').replace('⁺', '強')}`,
+              text: `预估最大震度${(!this.ttsCache[id].last.i) ? '不明' : intensity_list[this.ttsCache[id].last.i].replace('⁻', '弱').replace('⁺', '强')}`,
               queue: true,
             });
           }

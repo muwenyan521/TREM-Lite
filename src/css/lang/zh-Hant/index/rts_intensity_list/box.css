@@ -3,7 +3,7 @@
 }
 
 .max-intensity-text::before {
-  content: "最大觀測震度";
+  content: "最大观测震度";
 }
 
 .max-pga-text::before {

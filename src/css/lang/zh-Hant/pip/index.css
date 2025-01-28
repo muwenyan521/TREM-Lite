@@ -8,7 +8,7 @@ body {
   width: 100%;
   user-select: unset;
   margin: 0px;
-  font-family: Manrope, "Noto Sans TC", sans-serif;
+  font-family: Manrope, "Noto Sans CJK SC", sans-serif;
   text-rendering: optimizeLegibility;
 }
 

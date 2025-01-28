@@ -1,26 +1,26 @@
 ﻿.internet-error .title:before {
-  content: "網路異常";
+  content: "网络异常";
 }
 
 .unstable .title:before {
-  content: "不穩定";
+  content: "不稳定";
 }
 
 .unstable .warning-message-text span {
   &:nth-child(1)::before {
-    content: "受地震活動的影響";
+    content: "受地震活动的影响";
   }
   &:nth-child(2)::before {
-    content: "觀測點可能不穩定";
+    content: "观测点可能不稳定";
   }
 }
 
 .internet-error .warning-message-text span {
   &:nth-child(1)::before {
-    content: "網路連線異常";
+    content: "网络连接异常";
   }
   &:nth-child(2)::before {
-    content: "請待稍後重試";
+    content: "请稍后重试";
   }
 }
 
