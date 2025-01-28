@@ -499,7 +499,7 @@ class AudioManager {
     }
     this.ttsEewAlertLock = true;
     TREM.variable.speech.speak({
-      text: `紧急地震速报，${ans.data.city_alert_list.join('、')}，消息强烈摇晃`,
+      text: `紧急地震速报，${ans.data.city_alert_list.join('、')}，小心强烈摇晃`,
       queue: false,
       listeners: {
         onend: () => {
